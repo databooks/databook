@@ -8,7 +8,7 @@ This is Notebooks for Data Analysis, by [openthings](https://my.oschina.net/u/23
 ## Include
 
 - [jupyter](https://jupyter.org), include notebook, jupyterhub, jupyterlab webUI.
-- [conda](https://www.anaconda.com), a powerfull data-tools based python.
+- [conda](https://www.anaconda.com), a powerfull data-tools based python, or [miniconda](https://conda.io/miniconda.html)(much smaller, only essential packages).
 - [mlflow](https://mlflow.org/)，for machine learning using mlflow, which developed by databricks.
 - [airflow](https://airflow.incubator.apache.org/), for data pipline using airflow, which developed by Apache Software Foundation.
 - [tushare](http://tushare.org), a finacial live data sdk, using python api.
