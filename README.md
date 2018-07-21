@@ -3,7 +3,7 @@
 [![Documentation](http://readthedocs.org/projects/ipyleaflet/badge/?version=latest)](https://github.com/openthings)
 [![Binder](https://img.shields.io/badge/launch-binder-brightgreen.svg)](https://mybinder.org/v2/gh/openthings/databook/master)
 
-This is Notebooks for Data Analysis, by https://github.com/openthings/, [openthings](https://my.oschina.net/u/2306127).
+This is Notebooks for Data Analysis, by [openthings](https://my.oschina.net/u/2306127), https://github.com/openthings/ .
 
 ## Include
 
