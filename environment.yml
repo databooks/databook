@@ -9,3 +9,7 @@ dependencies:
   - requests
   - pillow
   - matplotlib
+  - pandas
+  - airflow
+  - mlflow
+  - tushare
