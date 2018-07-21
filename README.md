@@ -2,14 +2,16 @@
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/openthings/databook/master)
 
-by openthings.
+This is Notebooks for Data Analysis, by https://github.com/openthings/, [openthings](https://my.oschina.net/u/2306127).
 
-This is Notebooks for Data Analysis.
+## Include
 
-## Include:
-
-- mlflow，for machine learning using mlflow, which developed by databricks.
-- airflow, for data pipline using airflow, which developed by Apache SF.
+- [jupyter](), include notebook, jupyterhub, jupyterlab webUI.
+- [mlflow](https://mlflow.org/)，for machine learning using mlflow, which developed by databricks.
+- [airflow](), for data pipline using airflow, which developed by Apache Software Foundation.
+- [tushare](http://tushare.org), a finacial live data sdk, using python api.
+- [matplotlib](https://matplotlib.org/), a graphic plot lib, for jupyter notebook using %matplotlib inline.
+- [ipyleaflet]() , the leaflet map tools,include jupyterlab extension.
 
 ## Usage
 
@@ -19,3 +21,8 @@ This is Notebooks for Data Analysis.
 - commit your update to your github repository, by run commit.sh.
 - Pull update from https://github.com/openthings/databook, using upstream-pull.sh.
 - Submit a pull-request, to combine your notebook to upstream, from github webUI.
+
+## Resources
+
+- [jupyterviewer](https://jupyterviewers.org), for python and jupyter notebook tutorial resources.
+- [openthings](https://my.oschina.net/u/2306127), big-data, machine-learning, kubernetes, python and docker resources.
