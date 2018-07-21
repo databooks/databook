@@ -1,8 +1,7 @@
-# 数据之书-Databook
-
-by openthings.
-
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/openthings/databook/master)
+
+# 数据之书-Databook
+by openthings.
 
 This is Notebooks for Data Analysis.
 
