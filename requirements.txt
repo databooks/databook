@@ -4,6 +4,7 @@
 #httpretty==0.8.14
 #typing==3.6.2
 #pandas==0.20.3
+lxml
 airflow
 mlflow
 tushare
