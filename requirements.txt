@@ -4,11 +4,11 @@
 #httpretty==0.8.14
 #typing==3.6.2
 #pandas==0.20.3
-bs4
-lxml
-airflow
-mlflow
-tushare
+#bs4
+#lxml
+#airflow
+#mlflow
+#tushare
 #geojson==2.3.0
 #setuptools==36.5.0
 #ipyleaflet==0.5.3
