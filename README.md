@@ -26,6 +26,7 @@ This is Notebooks for Data Analysis, by [openthings](https://my.oschina.net/u/23
 
 ## Resources
 
+- [Python入门教程](https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001431608990315a01b575e2ab041168ff0df194698afac000),廖雪峰的Python教程。
 - [jupyterviewer](https://nbviewer.jupyter.org/), for python and jupyter notebook tutorial resources.
 - [The Jupyter Widget Ecosystem](https://github.com/jupyter-widgets/tutorial).
 - [openthings](https://my.oschina.net/u/2306127), big-data, machine-learning, kubernetes, python and docker resources.
