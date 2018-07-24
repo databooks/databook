@@ -1,20 +1,11 @@
 {
-<<<<<<< HEAD
-  "base_url": "/user/shuttlecock2018-databook-r6tf3cye/",
-=======
-  "base_url": "/user/openthings-databook-5yynv4nn/",
->>>>>>> upstream/master
+  "base_url": "/user/shuttlecock2018-databook-5eoukg7b/",
   "hostname": "0.0.0.0",
   "notebook_dir": "/home/jovyan",
   "password": false,
   "pid": 1,
   "port": 8888,
   "secure": false,
-<<<<<<< HEAD
-  "token": "wSfk9fVzS1e75ykf49M3ZQ",
-  "url": "http://0.0.0.0:8888/user/shuttlecock2018-databook-r6tf3cye/"
-=======
-  "token": "IWN52gOJRWeqoUHvelgR8A",
-  "url": "http://0.0.0.0:8888/user/openthings-databook-5yynv4nn/"
->>>>>>> upstream/master
+  "token": "d5M4EZ-7RF-6C0DDoraNXw",
+  "url": "http://0.0.0.0:8888/user/shuttlecock2018-databook-5eoukg7b/"
 }
