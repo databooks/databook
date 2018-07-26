@@ -7,6 +7,12 @@
 
 - 作者：[openthings](https://my.oschina.net/u/2306127)，[https://github.com/openthings/](https://github.com/openthings)，2018.07.
 
+
+```
+我的剑传给能挥舞它的人。
+       -- 查理.芒格
+```
+
 ## 创建步骤
 
 - 创建一个 [github.com](https://www.github.com) 账号。
