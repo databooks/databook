@@ -3,15 +3,14 @@
 [![Documentation](http://readthedocs.org/projects/ipyleaflet/badge/?version=latest)](https://github.com/openthings)
 [![Binder](https://img.shields.io/badge/launch-binder-brightgreen.svg)](https://mybinder.org/v2/gh/openthings/databook/master)
 
-用于数据分析的Jupyter Notebooks。不需购买服务器，快速开始自己的数据分析过程。
-
-- 作者：[openthings](https://my.oschina.net/u/2306127)，[https://github.com/openthings/](https://github.com/openthings)，2018.07.
-
-
 ```
 我的剑传给能挥舞它的人。
        -- 查理.芒格
 ```
+
+用于数据分析的Jupyter Notebooks。不需购买服务器，快速开始自己的数据分析过程。
+
+- 作者：[openthings](https://my.oschina.net/u/2306127)，[https://github.com/openthings/](https://github.com/openthings)，2018.07.
 
 ## 创建步骤
 
