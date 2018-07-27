@@ -8,10 +8,8 @@
        -- 查理.芒格
 ```
 
-用于数据分析的Jupyter Notebooks。
-
-快速开始自己的数据分析过程,不需购买服务器。
-
+- 用于数据分析的Jupyter Notebooks。
+- 快速开始自己的数据分析过程,不需购买服务器。
 - 作者：[openthings](https://my.oschina.net/u/2306127)，[https://github.com/openthings/](https://github.com/openthings)，2018.07.
 
 ## 创建步骤
