@@ -46,7 +46,7 @@ RUN pip install bs4 && \
     pip install tushare
 
 RUN conda update -n base conda
-RUN conda install -y -c conda-forge nodejs=8.10.0 && \
+RUN conda install -y -c conda-forge nodejs=8.11.3 && \
     conda install -y -c conda-forge tensorflow=1.8.0 && \
     jupyter labextension install jupyter-leaflet
 #    jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.35.0 && \
