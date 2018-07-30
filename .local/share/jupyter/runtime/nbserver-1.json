@@ -1,29 +1,11 @@
 {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "base_url": "/user/shuttlecock2018-databook-rz1fg5bu/",
-=======
-  "base_url": "/user/openthings-databook-fr7ptjgt/",
->>>>>>> upstream/master
-=======
-  "base_url": "/user/openthings-databook-r1ruvs4u/",
->>>>>>> 61a823197b279b0a2ee42dea819e49a3712c717d
+  "base_url": "/user/databooks-databook-zrf1pb41/",
   "hostname": "0.0.0.0",
   "notebook_dir": "/home/jovyan",
   "password": false,
   "pid": 1,
   "port": 8888,
   "secure": false,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  "token": "GA8e0s9NSL2HcAfRbcClZg",
-  "url": "http://0.0.0.0:8888/user/shuttlecock2018-databook-rz1fg5bu/"
-=======
-  "token": "kIQrb5-rTqu-kzKs9WvCfA",
-  "url": "http://0.0.0.0:8888/user/openthings-databook-fr7ptjgt/"
->>>>>>> upstream/master
-=======
-  "token": "dhjIGqLATCSpbxjmRWTB9w",
-  "url": "http://0.0.0.0:8888/user/openthings-databook-r1ruvs4u/"
->>>>>>> 61a823197b279b0a2ee42dea819e49a3712c717d
+  "token": "rK5ksIV_TDq3G4euaJRvcw",
+  "url": "http://0.0.0.0:8888/user/databooks-databook-zrf1pb41/"
 }
