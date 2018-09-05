@@ -21,7 +21,7 @@ hub:
         - ReadWriteOnce
       storage: 1Gi
       subPath:
-      storageClassName: "nfs"
+      storageClassName: "openthings-nfs"
     url:
   labels: {}
   annotations:
@@ -176,7 +176,7 @@ singleuser:
     capacity: 1Gi
     homeMountPath: /home/jovyan
     dynamic:
-      storageClass: "nfs"
+      storageClass: "openthings-nfs"
       pvcNameTemplate: claim-{username}{servername}
       volumeNameTemplate: volume-{username}{servername}
       storageAccessModes: [ReadWriteOnce]
