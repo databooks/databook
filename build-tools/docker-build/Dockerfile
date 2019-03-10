@@ -14,6 +14,8 @@ ENV HTTPS_PROXY ${HTTP_PROXY}
 ENV http_proxy ${HTTP_PROXY}
 ENV https_proxy ${HTTP_PROXY}
 
+ENV SLUGIFY_USES_TEXT_UNIDECODE=yes
+
 #Add conda install mirror:
 
 RUN echo $http_proxy && \
@@ -42,12 +44,14 @@ RUN pip install bs4 && \
     pip install py4j && \
     pip install pyspark && \
     pip install mlflow && \
-    pip install airflow && \
+    pip install apache-airflow && \
     pip install tushare
 
 RUN conda update -n base conda
 RUN conda install -y nodejs=8.11.3
 RUN conda install -y tensorflow=1.8.0 
+
+RUN conda install -y pytorch torchvision cudatoolkit=9.0 -c pytorch
 
 #RUN conda install -y -c conda-forge nodejs=8.11.3
 #RUN conda install -y -c conda-forge tensorflow=1.8.0 
