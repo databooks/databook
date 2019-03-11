@@ -48,10 +48,12 @@ RUN pip install bs4 && \
     pip install tushare
 
 RUN conda update -n base conda
-RUN conda install -y nodejs=8.11.3
+RUN conda install -y nodejs=8.11.3 scikit-image
 RUN conda install -y tensorflow=1.8.0 
 
 RUN conda install -y pytorch torchvision cudatoolkit=9.0 -c pytorch
+
+RUN conda update --all
 
 #RUN conda install -y -c conda-forge nodejs=8.11.3
 #RUN conda install -y -c conda-forge tensorflow=1.8.0 
