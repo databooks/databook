@@ -40,25 +40,21 @@ USER $NB_UID
 RUN pip install --upgrade pip 
 RUN pip install bs4 && \
     pip install lxml && \
-    pip install ipyleaflet && \
     pip install py4j && \
     pip install pyspark && \
-    pip install mlflow && \
-    pip install apache-airflow && \
     pip install tushare
 
-RUN conda update -n base conda
-RUN conda install -y nodejs=8.11.3 scikit-image
-RUN conda install -y tensorflow=1.8.0 
-
-RUN conda install -y pytorch torchvision cudatoolkit=9.0 -c pytorch
+RUN conda install -y nodejs scikit-image matplotlab ipyleaflet
+RUN conda install -y tensorflow apache-airflow mlflow
+RUN conda install -y pytorch torchvision cudatoolkit=10.0 -c pytorch
 
 RUN conda update --all
+RUN conda install jupyterlab=0.34.12
 
-#RUN conda install -y -c conda-forge nodejs=8.11.3
-#RUN conda install -y -c conda-forge tensorflow=1.8.0 
+RUN jupyter labextension install @jupyter-widgets/jupyterlab-manager
 RUN jupyter labextension install jupyter-leaflet
-#    jupyter labextension install @jupyter-widgets/jupyterlab-manager@0.35.0 && \
+RUN jupyter labextension upgrade --all
+RUN jupyter lab build
 
 # ====================================================================
 ENV HTTP_PROXY ""
