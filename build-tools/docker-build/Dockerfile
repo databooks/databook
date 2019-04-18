@@ -37,6 +37,7 @@ timeout = 120 \
 # ====================================================================
 USER $NB_UID
 
+RUN apt update && apt upgrade -y
 RUN pip install --upgrade pip 
 RUN pip install bs4 && \
     pip install lxml && \
