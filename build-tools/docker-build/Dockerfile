@@ -33,6 +33,10 @@ COPY ./SuperMap/iobjectsjava911/Bin /opt/SuperMap/iobjects/911/
 # ====================================================================
 # Add proxy, using --build-arg "HTTP_PROXY=http://192.168.199.99:9999"
 
+RUN apt update && apt upgrade -y
+
+# ====================================================================
+# Add proxy, using --build-arg "HTTP_PROXY=http://192.168.199.99:9999"
 #ENV HTTP_PROXY ${HTTP_PROXY}
 #ENV HTTPS_PROXY ${HTTP_PROXY}
 #ENV http_proxy ${HTTP_PROXY}
@@ -72,6 +76,28 @@ RUN pip install --upgrade pip && \
 #RUN pip install  matplotlib descartes pysal
 
 # ====================================================================
+USER $NB_UID
+
+#=============================
+#Add conda install mirror:
+RUN echo $http_proxy && \
+    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ && \
+    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/ && \
+    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/ && \
+    conda config --set show_channel_urls yes
+
+#=============================
+#Add pip install mirror:
+RUN mkdir -p ~/.pip
+RUN echo "[global] \
+index-url = http://pypi.tuna.tsinghua/simple \
+trusted-host = \
+    pypi.tuna.tsinghua \
+timeout = 120 \
+" > ~/.pip/pip.conf
+#" > /etc/pip.conf
+
+# ====================================================================
 # Add GDAL/OSM tools(GDAL/GeoPandas/PBFParser/PDF-rw/...).
 #RUN pip install geojson gdal geopandas shapely fiona six geopy psycopg2  
 #RUN pip install imposm.parser 
@@ -99,6 +125,17 @@ RUN conda install -y \
        ipyleaflet traitlets==4.3.2  ipywidgets==7.0.0 \
        geojson gdal geopandas shapely fiona six geopy psycopg2
                   
+RUN pip install --upgrade pip 
+RUN pip install bs4 && \
+    pip install lxml && \
+    pip install py4j && \
+    pip install pyspark && \
+    pip install modin && \
+    pip install tushare
+
+RUN conda update -n base conda
+RUN conda install -y nodejs scikit-image matplotlib ipyleaflet
+
 RUN conda install -y tensorflow airflow mlflow
 RUN conda install -y pytorch torchvision cudatoolkit=10.0 -c pytorch
 
