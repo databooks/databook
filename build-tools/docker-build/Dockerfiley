@@ -105,7 +105,7 @@ RUN conda install -y tensorflow airflow mlflow
 RUN conda install -y pytorch torchvision cudatoolkit=10.0 -c pytorch
 
 RUN conda install -y -c http://iclientpy.supermap.io/conda/channel iclientpy
-RUN conda update --all
+#RUN conda update --all
 
 # ====================================================================
 # Add JupyterHub install:
