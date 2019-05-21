@@ -37,10 +37,10 @@ RUN apt update && apt upgrade -y
 
 # ====================================================================
 # Add proxy, using --build-arg "HTTP_PROXY=http://192.168.199.99:9999"
-#ENV HTTP_PROXY ${HTTP_PROXY}
-#ENV HTTPS_PROXY ${HTTP_PROXY}
-#ENV http_proxy ${HTTP_PROXY}
-#ENV https_proxy ${HTTP_PROXY}
+ENV HTTP_PROXY ${HTTP_PROXY}
+ENV HTTPS_PROXY ${HTTP_PROXY}
+ENV http_proxy ${HTTP_PROXY}
+ENV https_proxy ${HTTP_PROXY}
 
 USER $NB_UID
 ENV SLUGIFY_USES_TEXT_UNIDECODE=yes
@@ -54,8 +54,8 @@ use-mirrors = true \n\
 trusted-host = \n\
     pypi.tuna.tsinghua \n\
     pypi.douban.com \n\
-timeout = 120 \
-" > ~/.pip/pip.conf 
+timeout = 300 \
+" > ~/.pip/pip.conf
 
 # ====================================================================
 # Add python packages:
@@ -67,35 +67,14 @@ RUN pip install --upgrade pip && \
     pip install modin && \
     pip install tushare
 #    pip install coverage==4.4.2 \
-#                sure==1.4.7 \
 #                typing==3.6.2 \
-                
-                
 
 # Add drawing packages:
 #RUN pip install  matplotlib descartes pysal
 
 # ====================================================================
-USER $NB_UID
-
-#=============================
-#Add conda install mirror:
-RUN echo $http_proxy && \
-    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ && \
-    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/ && \
-    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/ && \
-    conda config --set show_channel_urls yes
-
-#=============================
-#Add pip install mirror:
-RUN mkdir -p ~/.pip
-RUN echo "[global] \
-index-url = http://pypi.tuna.tsinghua/simple \
-trusted-host = \
-    pypi.tuna.tsinghua \
-timeout = 120 \
-" > ~/.pip/pip.conf
-#" > /etc/pip.conf
+# Add iObjects-python packages:
+RUN pip install iobjectspy==9.1.1
 
 # ====================================================================
 # Add GDAL/OSM tools(GDAL/GeoPandas/PBFParser/PDF-rw/...).
@@ -103,17 +82,6 @@ timeout = 120 \
 #RUN pip install imposm.parser 
 
 # ====================================================================
-# Add iObjects-python packages:
-RUN pip install iobjectspy==9.1.1
-
-# ====================================================================
-# Add conda install mirror:
-RUN echo $HTTP_PROXY && \
-    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ && \
-    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/ && \
-    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/ && \
-    conda config --set show_channel_urls yes
-
 RUN conda update -n base conda
 
 RUN conda install -y \
@@ -125,21 +93,12 @@ RUN conda install -y \
        ipyleaflet traitlets==4.3.2  ipywidgets==7.0.0 \
        geojson gdal geopandas shapely fiona six geopy psycopg2
                   
-RUN pip install --upgrade pip 
-RUN pip install bs4 && \
-    pip install lxml && \
-    pip install py4j && \
-    pip install pyspark && \
-    pip install modin && \
-    pip install tushare
-
-RUN conda update -n base conda
 RUN conda install -y nodejs scikit-image matplotlib ipyleaflet
 
 RUN conda install -y tensorflow airflow mlflow
 RUN conda install -y pytorch torchvision cudatoolkit=10.0 -c pytorch
 
-RUN conda install -y -c http://iclientpy.supermap.io/conda/channel iclientpy
+#RUN conda install -y -c http://iclientpy.supermap.io/conda/channel iclientpy
 RUN conda update --all
 
 # ====================================================================
