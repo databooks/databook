@@ -5,7 +5,7 @@ echo "========================================================"
 echo "Prepare SuperMap iObjects Java packages ..."
 
 mkdir -p ./SuperMap/iobjectsjava911/Bin
-cp -r ../../../resources/Bin ./SuperMap/iobjectsjava911/
+cp -r ../../../resources/Bin ./SuperMap/iobjectsjava911/Bin
 cp -r ../../../resources/supermap_any_2019.lic9d ./SuperMap/supermap_any_2019.lic9d
 
 echo ""
