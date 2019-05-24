@@ -1,3 +1,4 @@
+
 echo ""
 echo "========================================================"
 echo "Prepare SuperMap iObjects Java packages ..."
@@ -20,3 +21,4 @@ echo ""
 echo "Build openthings/databook Finished, view: docker images."
 echo "========================================================"
 echo ""
+
