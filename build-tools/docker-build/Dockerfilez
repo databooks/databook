@@ -116,6 +116,7 @@ ENV https_proxy ""
 # =======================================================================================
 # SuperMap packages. 
 # ********************************************************************
+USER root
 
 #RUN conda install -y -c http://iclientpy.supermap.io/conda/channel iclientpy
 #RUN conda update --all
