@@ -128,7 +128,7 @@ RUN mkdir -p /opt/SuperMap/License/
 COPY ./SuperMap/supermap_any_2019.lic9d  /opt/SuperMap/License/
 
 RUN mkdir -p /opt/SuperMap/iobjects/911/Bin
-COPY ./SuperMap/iobjectsjava911/Bin /opt/SuperMap/iobjects/911/Bin 
+COPY ./SuperMap/iobjectsjava911/Bin /opt/SuperMap/iobjects/911/Bin/ 
 # ********************************************************************
 # ====================================================================
 
