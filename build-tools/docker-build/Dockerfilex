@@ -129,6 +129,10 @@ COPY ./SuperMap/supermap_any_2019.lic9d  /opt/SuperMap/License/
 
 RUN mkdir -p /opt/SuperMap/iobjects/911/Bin
 COPY ./SuperMap/iobjectsjava911/Bin /opt/SuperMap/iobjects/911/Bin/ 
+
+RUN chmod +x /opt/SuperMap/iobjects/911/Bin/libpng12-0_1.2.54-1ubuntu1.1_amd64.deb && \
+    dpkg -i /opt/SuperMap/iobjects/911/Bin/libpng12-0_1.2.54-1ubuntu1.1_amd64.deb
+
 # ********************************************************************
 # ====================================================================
 
